@@ -7,7 +7,7 @@ import openai
 model_engine = "text-davinci-003"
 
 # Follow README.md to create an Open API secret key
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Define Streamlit web page's configuration
 st.set_page_config(
@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # Add description on the website
-st.image('assets/wcd_logo_new_2.png', width=200)
+st.image('assets/wcd_logo_new_2.png', width=100)
 st.title("ChatGPT-based Chat Application")
 st.subheader("Description")
 st.info(
@@ -41,7 +41,8 @@ def get_user_query():
     """
 
     # Text box for user query
-    query = st.text_input("Please enter your query here. e.g. What is Python?")
+    st.write("This is the chat interface")
+    query = st.text_input("Hello!!!! Please enter your query here. e.g. What is Python?")
 
     return query
 
@@ -50,7 +51,7 @@ def call_openai_chat_gpt(user_query):
     """
     This functions call OpenAI API and receive a response
     """
-
+    
     # Use OpenAI API with the following parameters
     response = openai.Completion.create(
         engine=model_engine,
@@ -60,6 +61,7 @@ def call_openai_chat_gpt(user_query):
         temperature=0.5,
     )
 
+    print(response)
     # Retrieve the response text
     text = response.choices[0].text
 
