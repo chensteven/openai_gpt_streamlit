@@ -44,6 +44,10 @@ streamlit run app.py
 7. Type your query in the text box and press Enter.
 8. The ChatGPT model will provide a response which will be displayed on the screen along with the chat history.
 
+## Deployment to Streamlit
+- Follow this guide to deploy an app: https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app
+- Follow this guide for secret management: https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app/connect-to-data-sources/secrets-management
+
 ## Implementation Details
 The application is built using Streamlit for the user interface and OpenAI's GPT-3 based ChatGPT model for generating responses.
 
