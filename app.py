@@ -2,12 +2,13 @@
 import streamlit as st
 from streamlit_chat import message
 import openai
+import os
 
 # Define the model engine and your OpenAI API key
 model_engine = "text-davinci-003"
 
 # Follow README.md to create an Open API secret key
-openai.api_key = "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"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # Define Streamlit web page's configuration
 st.set_page_config(

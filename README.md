@@ -24,19 +24,25 @@ pip install -r requirements.txt
     3. Click on "Create new secret key"
     4. Copy the secret key
 
-3. Replace the placeholder OpenAI API key in the file app.py with your own.
-```python
-openai.api_key = "your-api-secret-key-here"
+3. Create a hidden directory named streamlit and then create a file named secrets.toml inside that directory.
+```bash
+mkdir .streamlit
+touch .streamlit/secrets.toml
 ```
 
-4. Run the Streamlit application in the terminal.
+4. Inside secrets.toml put your Open API Key
+```python
+OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"  
+```
+
+5. Run the Streamlit application in the terminal.
 ```bash
 streamlit run app.py
 ```
 
-5. Access the application through the provided URL.
-6. Type your query in the text box and press Enter.
-7. The ChatGPT model will provide a response which will be displayed on the screen along with the chat history.
+6. Access the application through the provided URL.
+7. Type your query in the text box and press Enter.
+8. The ChatGPT model will provide a response which will be displayed on the screen along with the chat history.
 
 ## Implementation Details
 The application is built using Streamlit for the user interface and OpenAI's GPT-3 based ChatGPT model for generating responses.
